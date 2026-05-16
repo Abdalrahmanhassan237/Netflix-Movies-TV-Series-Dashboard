@@ -115,11 +115,16 @@ def clean_votes(val):
 final_df["votes"] = final_df["votes"].apply(clean_votes)
 final_df["imdbNumVotes"] = final_df["imdbNumVotes"].apply(clean_votes)
 
+# 10.seperate Tv Shows
+tv_shows_df = titles_df[titles_df["type"].str.lower().str.strip() == "tv show"].copy()
 
 print(final_df.isnull().sum())
 print(f"original tiltles data : {titles_df.shape}")
 print(f"original movies_tiltles data : {movies_only_df.shape}")
+print(f"seperated Tv Shows data : {tv_shows_df.shape}")
 print(f"merged data : {merged_df.shape}")
 print(f"final data : {final_df.shape}")
 
+
+tv_shows_df.to_csv("Netflix_Tv_Shows.csv", index=False, encoding="utf-8-sig")
 final_df.to_csv("Final_Netflix_Analysis_Clean.csv", index=False, encoding="utf-8-sig")
