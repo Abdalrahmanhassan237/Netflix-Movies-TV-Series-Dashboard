@@ -72,7 +72,7 @@ final_df = pd.merge(
 
 # 5. rename columns after merge
 final_df.rename(
-    columns={"ratings_x": "mautaring_rating", "ratings_y": "revenue_rating"},
+    columns={"rating_x": "mautaring_rating", "rating_y": "revenue_rating"},
     inplace=True,
 )
 
@@ -112,10 +112,14 @@ def clean_votes(val):
     return pd.to_numeric(val, errors="coerce")
 
 
+final_df["votes"] = final_df["votes"].apply(clean_votes)
+final_df["imdbNumVotes"] = final_df["imdbNumVotes"].apply(clean_votes)
+
+
 print(final_df.isnull().sum())
 print(f"original tiltles data : {titles_df.shape}")
 print(f"original movies_tiltles data : {movies_only_df.shape}")
 print(f"merged data : {merged_df.shape}")
 print(f"final data : {final_df.shape}")
 
-final_df.to_csv("Netflix_merged_data.csv")
+final_df.to_csv("Final_Netflix_Analysis_Clean.csv", index=False, encoding="utf-8-sig")
