@@ -82,7 +82,34 @@ money_cols = ["budget", "opening_weekend_gross", "gross_worldwide", "gross_us_ca
 
 for col in money_cols:
     final_df[col] = final_df[col].astype(str).str.replace(r"[^\d.]", "", regex=True)
-    final_df[col] = pd.to_numeric(final_df["col"], errors="coerce")
+    final_df[col] = pd.to_numeric(final_df[col], errors="coerce")
+
+# 7. clean duration column
+if "duration" in final_df.columns:
+    final_df["duration"] = (
+        final_df["duration"]
+        .astype(str)
+        .str.replace(r"\s*min\s*$", "", regex=True)
+        .str.strip()
+    )
+    final_df["duration"] = pd.to_numeric(final_df["duration"], errors="coerce")
+
+# 8. rename it
+final_df.rename(columns={"duration": "duration_min"}, inplace=True)
+
+
+# 9. clean votes column
+def clean_votes(val):
+    if pd.isna(val):
+        return val
+    val = str(val).upper()
+    if "K" in val:
+        return float(val.replace("K", "")) * 1000
+    if "M" in val:
+        return float(val.replace("M", "")) * 1000000
+    # remove ',' or anything else
+    val = re.sub(r"[^\d.]", "", val)
+    return pd.to_numeric(val, errors="coerce")
 
 
 print(final_df.isnull().sum())
