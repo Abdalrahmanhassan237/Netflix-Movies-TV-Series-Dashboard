@@ -46,5 +46,5 @@ Technologies utilized to ensure data integrity and visual excellence:
 * HTML, CSS, and JavaScript: Implemented via custom visuals to bypass native visualization limitations, creating a dynamic, responsive horizontal scroll component for movie posters.
 
 ---
-Developed by: [Your Name] - Data Analyst
-LinkedIn: [Your LinkedIn Profile URL]
+Developed by: Abdelrahman Hassan- Data Analyst
+LinkedIn: https://www.linkedin.com/in/abdelrahman-hassan-pa/
