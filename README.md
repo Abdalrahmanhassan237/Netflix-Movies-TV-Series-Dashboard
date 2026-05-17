@@ -4,7 +4,7 @@
 <img width="1328" height="742" alt="image" src="https://github.com/user-attachments/assets/f268dba0-f101-4a58-abd1-64dc3d5c502e" />
 
 
-[View Live Power BI Dashboard Here](Insert_Your_Link_Here)
+[View Live Power BI Dashboard Here](https://app.powerbi.com/view?r=eyJrIjoiNjUxMmRkMGYtYzEwNS00Y2I5LTllODQtYWQ2MzMzNzc0YWJhIiwidCI6IjJiYjZlNWJjLWMxMDktNDdmYi05NDMzLWMxYzZmNGZhMzNmZiIsImMiOjl9)
 
 ---
 
