@@ -4,7 +4,7 @@
 <img width="1328" height="742" alt="image" src="https://github.com/user-attachments/assets/f268dba0-f101-4a58-abd1-64dc3d5c502e" />
 
 
-[View Live Power BI Dashboard Here](https://app.powerbi.com/view?r=eyJrIjoiNjUxMmRkMGYtYzEwNS00Y2I5LTllODQtYWQ2MzMzNzc0YWJhIiwidCI6IjJiYjZlNWJjLWMxMDktNDdmYi05NDMzLWMxYzZmNGZhMzNmZiIsImMiOjl9)
+[View Live Power BI Dashboard Here](https://app.powerbi.com/view?r=eyJrIjoiOThmZTRhZGMtYzlmNy00NmM3LWE4YTEtYThiYmQxMTVmNzU4IiwidCI6IjJiYjZlNWJjLWMxMDktNDdmYi05NDMzLWMxYzZmNGZhMzNmZiIsImMiOjl9)
 
 ---
 
@@ -13,6 +13,9 @@ This project transforms raw Netflix data (catalog size, IMDb ratings, and box of
 
 ##  The Business Problem
 Decision-makers often look at content and financial data separately. This creates a blind spot. A movie might have great ratings but lose money, or generate massive revenue but cost too much to make. This dashboard merges these datasets to reveal the *true* Return on Investment (ROI) of every genre and market.
+---
+##  Data Model
+<img width="1472" height="720" alt="image" src="https://github.com/user-attachments/assets/8342a354-019e-4791-aa7d-13111776d69a" />
 
 ---
 
